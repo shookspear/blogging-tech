@@ -1,0 +1,29 @@
+{{!-- Post Creation --}}
+
+<section>
+  <a href="/dashboard"> &larr; Back to dashboard</a>
+  <h2>
+   Create new post:
+  </h2>
+
+  {{!-- Users input form for making new post --}}
+  <form class="new-post-form">
+
+    {{!-- Post Title --}}
+    <div class="form-group">
+        <label for="post-title">Title:</label>
+      <input class="input form-control" name="post-title" type="text" placeholder="Insert title here" />
+    </div>
+
+    {{!-- Post Content --}}
+    <div class="form-group">
+    <label for="post-content">Post Content:</label>
+      <textarea class="textarea form-control" rows="5" name="post-content"></textarea>
+    </div>
+
+    {{!-- Submission Button --}}
+    <button type="submit" >Create Blog Post</button>
+  </form>
+</section>
+
+<script src="/javascript/add-post.js"></script> 

@@ -1,0 +1,17 @@
+{{! Home Page }}
+<h1>Current Bog Posts:</h1>
+
+{{!-- Populates with all events --}}
+<div>
+    {{#each posts as |post|}}
+
+    {{> post-info post }}
+
+
+{{else}}
+<h5 class="pb-4 text-centered">No current Blog Posts</h5><br />
+<a href="/dashboard/create" class="btn btn-primary me-2" role="button">Create Blog Post</a>
+{{/each}}
+
+</div>
+

@@ -1,0 +1,31 @@
+{{!-- Page for when users clicks on individual Blog Post --}}
+
+{{!-- Blog Post description --}}
+<article class="post">
+  <div class="my-2">
+    <h3>{{post.title}}</h3> Posted by <a href="/user/{{post.user.id}}">{{post.user.username}}</a> on {{format_date post.created_at}}<br /><br />
+    {{post.details}}
+  </div>
+</article>
+
+{{!-- If signed in will show comment box --}}
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">Add Comment</button>
+  </div>
+  
+</form>
+{{/if}}
+
+{{!-- Prior comments are visible regardless if signed in --}}
+{{> comments post.comments}}
+
+{{! link to JS}}
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}

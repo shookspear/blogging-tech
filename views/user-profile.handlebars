@@ -1,0 +1,29 @@
+{{!-- Page when user clicks on another user profile --}}
+
+{{!-- Other user information --}}
+<section>
+  <div class="card border-light mb-3" style="max-width: 18rem;">
+    <div class="card-header">Profile</div>
+    <div class="card-body text-primary">
+      <h3 class="card-title">{{profile.username}}</h3>
+    </div>
+  </div>
+</section>
+
+
+
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ul class="list-group">
+    {{#each posts as |post|}}
+    <li class="list-group-item">
+      {{> post-info post}}
+    </li>
+    {{/each}}
+  </ul>
+  {{else}}
+  <h5 class="pb-4 text-center">You do not have any Blog Posts</h5><br />
+  <a href="/dashboard/create" class="btn btn-primary me-2" role="button">Create Blog Post</a>
+</section>
+{{/if}}

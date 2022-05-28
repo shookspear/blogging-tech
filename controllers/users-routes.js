@@ -1,0 +1,25 @@
+const router = require('express').Router();
+const { User } = require('../models');
+
+//get user profile
+router.get('/:id', (req,res) => {
+    User.findByPk(req.params.id, {
+        attributes: { exclude: ['password'] }
+    }).then(data => {
+        if (!data) {
+            res.status(404).json({ message: 'No user found with this id' });
+            return;
+        }
+        const profile =  data.get({plain: true});
+        res.render('user-profile', {
+            profile,
+            loggedIn: req.session.loggedIn
+        });
+    })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+module.exports = router;
