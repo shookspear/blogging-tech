@@ -10,6 +10,9 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 ![Blogging Tech](public/images/screenshot.png)
 
 
+## Walkthrough Video
+https://drive.google.com/file/d/1VA_p7FYY6Tuh6SXp4zDdXtcYZPzZAY2b/view
+
 ## Built With
 * HTML
 * CSS
@@ -21,5 +24,6 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 
 ## Website
 https://eo-blogging-tech.herokuapp.com/
+[See walkthrough Video]
 
 ### ©️2022 Echeta Okeke
