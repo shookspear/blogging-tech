@@ -7,7 +7,7 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 
 
 ## Screenshot
-![Offline Budget Tracker](public/images/screenshot.png)
+![Blogging Tech](public/images/screenshot.png)
 
 
 ## Built With
@@ -20,6 +20,6 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 * Sequelize
 
 ## Website
-https://eo-budget-tracker.herokuapp.com/
+https://eo-blogging-tech.herokuapp.com/
 
 ### ©️2022 Echeta Okeke
